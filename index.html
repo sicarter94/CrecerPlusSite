@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crecer+ by Fabuleux - Huile capillaire naturelle 4oz</title>
+    <meta name="description" content="Crecer+ by Fabuleux - Huile capillaire naturelle pour pousse et brillance visibles en 2 à 4 semaines. Ingrédients: olive, persil, girofle, gingembre, vitamine E. Prix: 750 Gdes.">
+    
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Variables CSS */
+        :root {
+            --primary: #5AC8FA;
+            --primary-dark: #2EA8E1;
+            --white: #FFFFFF;
+            --light-gray: #F8F9FA;
+            --gray: #6C757D;
+            --dark: #212529;
+            --border-radius: 16px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset et styles de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        section {
+            padding: 5rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section-light {
+            background-color: var(--light-gray);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-large {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: var(--transition);
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            height: 40px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+        }
+
+        .nav-cta:hover {
+            background-color: var(--primary-dark);
+            color: var(--white);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: var(--dark);
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 8rem;
+            padding-bottom: 5rem;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(90, 200, 250, 0.1) 0%, rgba(255, 255, 255, 1) 100%);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--gray);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-image img {
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            max-height: 500px;
+            object-fit: cover;
+        }
+
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            background-color: rgba(90, 200, 250, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .benefit-card h3 {
+            margin-bottom: 1rem;
+        }
+
+        /* Evolution Section */
+        .evolution-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .evolution-item {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .evolution-item.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .evolution-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .evolution-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .evolution-subtitle {
+            text-align: center;
+            margin-top: 2rem;
+            font-style: italic;
+            color: var(--gray);
+        }
+
+        /* Before After Section - CORRIGÉ */
+        .comparison-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+
+        .comparison-image {
+            position: relative;
+            height: 500px;
+        }
+
+        .before-image, .after-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .after-image {
+            clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+        }
+
+        .comparison-slider {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background-color: var(--white);
+            cursor: ew-resize;
+            transform: translateX(-50%);
+        }
+
+        .comparison-slider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            background-color: var(--white);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .comparison-label {
+            position: absolute;
+            bottom: 20px;
+            padding: 0.5rem 1rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: var(--white);
+            border-radius: var(--border-radius);
+            font-size: 0.9rem;
+        }
+
+        .before-label {
+            left: 20px;
+        }
+
+        .after-label {
+            right: 20px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .testimonials-carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial-slide {
+            min-width: 100%;
+            padding: 0 1rem;
+        }
+
+        .testimonial-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+
+        .testimonial-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .carousel-btn {
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .carousel-btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Usage Section */
+        .usage-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .step-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .step-tip {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: rgba(90, 200, 250, 0.1);
+            border-radius: var(--border-radius);
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Order Section */
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+
+        .pricing-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-savings {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+
+        .faq-question {
+            background-color: var(--white);
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            background-color: var(--white);
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(90, 200, 250, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(90, 200, 250, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .ingredients-list {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .ingredients-list h3 {
+            margin-bottom: 1rem;
+        }
+
+        .ingredients-list ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+
+        .ingredients-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .footer-link:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* WhatsApp Float Button - CORRIGÉ */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+            overflow: hidden;
+        }
+
+        .whatsapp-float img {
+            width: 35px;
+            height: 35px;
+            object-fit: contain;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Responsive Styles - AMÉLIORÉ */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 4rem 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-container {
+                padding: 0 1rem;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+            
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                gap: 0;
+                flex-direction: column;
+                background-color: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 2rem 0;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-item {
+                margin: 1rem 0;
+            }
+            
+            .hero {
+                padding-top: 6rem;
+                padding-bottom: 3rem;
+                min-height: auto;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero-text p {
+                font-size: 1.1rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+                gap: 0.8rem;
+            }
+
+            .benefits-grid,
+            .usage-steps,
+            .pricing-container {
+                gap: 1.5rem;
+            }
+
+            .benefit-card,
+            .step-card,
+            .pricing-card {
+                padding: 1.5rem;
+            }
+
+            .evolution-gallery {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .comparison-image {
+                height: 400px;
+            }
+
+            .faq-question {
+                padding: 1.2rem;
+            }
+
+            .contact-container {
+                gap: 2rem;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-5px);
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .hero {
+                padding-top: 5rem;
+            }
+            
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+            
+            .btn-large {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .benefits-grid,
+            .usage-steps,
+            .pricing-container {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-image {
+                height: 300px;
+            }
+
+            .comparison-label {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+                bottom: 15px;
+            }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+
+            .whatsapp-float img {
+                width: 30px;
+                height: 30px;
+            }
+
+            section {
+                padding: 2.5rem 1rem;
+            }
+
+            .footer-links {
+                gap: 1rem;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero-text h1 {
+                font-size: 1.6rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .comparison-image {
+                height: 250px;
+            }
+
+            .benefit-card,
+            .step-card,
+            .pricing-card {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#accueil" class="logo">
+                <img src="images/fab1.png" alt="Crecer+ by Fabuleux" class="logo">
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="#bienfaits" class="nav-link">Bienfaits</a></li>
+                <li class="nav-item"><a href="#evolution" class="nav-link">Évolution</a></li>
+                <li class="nav-item"><a href="#avant-apres" class="nav-link">Avant/Après</a></li>
+                <li class="nav-item"><a href="#avis" class="nav-link">Avis</a></li>
+                <li class="nav-item"><a href="#utilisation" class="nav-link">Utilisation</a></li>
+                <li class="nav-item"><a href="#commander" class="nav-link">Commander</a></li>
+                <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#commander" class="nav-link nav-cta">Commander – 750 Gdes</a></li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Crecer+ by Fabuleux</h1>
+                    <p>Pousse & brillance visibles en 2 à 4 semaines.</p>
+                    <p>Huile naturelle 4oz — olive, persil, girofle, gingembre, vitamine E.</p>
+                    <div class="hero-buttons">
+                        <a href="#commander" class="btn btn-large">Commander – 750 Gdes</a>
+                        <a href="#evolution" class="btn btn-large btn-secondary">Voir les résultats</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/im2.jpg" alt="Crecer+ Huile Capillaire">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="bienfaits" class="section-light">
+        <div class="container">
+            <h2>Bienfaits & Ingrédients</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌿</div>
+                    <h3>Huile d'olive</h3>
+                    <p>Nourrit et hydrate en profondeur les cheveux et le cuir chevelu.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌱</div>
+                    <h3>Persil</h3>
+                    <p>Stimule la repousse capillaire et renforce les follicules.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌸</div>
+                    <h3>Girofle</h3>
+                    <p>Fortifie les racines et limite la casse des cheveux.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🍃</div>
+                    <h3>Gingembre</h3>
+                    <p>Active la micro-circulation pour une pousse optimale.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">✨</div>
+                    <h3>Vitamine E</h3>
+                    <p>Apporte brillance et protection contre les agressions extérieures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evolution Section -->
+    <section id="evolution">
+        <div class="container">
+            <h2>Évolution des Résultats</h2>
+            <div class="evolution-gallery">
+                <div class="evolution-item">
+                    <img src="images/1.jpg" alt="Résultats semaine 1">
+                </div>
+                <div class="evolution-item">
+                    <img src="images/2.jpg" alt="Résultats semaine 2">
+                </div>
+                <div class="evolution-item">
+                    <img src="images/3.jpg" alt="Résultats semaine 3">
+                </div>
+            </div>
+            <p class="evolution-subtitle">Les images parlent d'elles-mêmes.</p>
+        </div>
+    </section>
+
+    <!-- Before After Section - CORRIGÉ -->
+    <section id="avant-apres" class="section-light">
+        <div class="container">
+            <h2>Avant / Après</h2>
+            <div class="comparison-container">
+                <div class="comparison-image">
+                    <!-- IMAGES INVERSEES -->
+                    <img src="images/apres.jpg" alt="Après Crecer+" class="before-image">
+                    <img src="images/avant.jpg" alt="Avant Crecer+" class="after-image">
+                    <div class="comparison-slider"></div>
+                    <div class="comparison-label before-label">Avant Crecer+</div>
+                    <div class="comparison-label after-label">Après Crecer+ ✨</div>
+                </div>
+                <input type="range" min="0" max="100" value="50" class="comparison-range">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="avis">
+        <div class="container">
+            <h2>Avis Clients</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Elles l'ont essayé. Elles ont adopté.</p>
+            <div class="testimonials-container">
+                <div class="testimonials-carousel">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-image">
+                            <img src="images/sc1.jpg" alt="Avis client 1">
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-image">
+                            <img src="images/sc2.jpg" alt="Avis client 2">
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-image">
+                            <img src="images/sc3.jpg" alt="Avis client 3">
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-image">
+                            <img src="images/sc4.jpg" alt="Avis client 4">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev-btn">&#10094;</button>
+                    <button class="carousel-btn next-btn">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Section -->
+    <section id="utilisation" class="section-light">
+        <div class="container">
+            <h2>Mode d'Utilisation</h2>
+            <div class="usage-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Appliquez</h3>
+                    <p>3 à 6 gouttes sur le cuir chevelu propre.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Massez</h3>
+                    <p>2 à 3 minutes pour une pénétration optimale.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Répétez</h3>
+                    <p>2 à 3 fois par semaine, à la racine.</p>
+                </div>
+            </div>
+            <div class="step-tip">
+                <p><strong>Conseil :</strong> Insister sur les zones clairsemées. Aucun rinçage nécessaire.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="commander">
+        <div class="container">
+            <h2>Commandez Maintenant</h2>
+            <div class="pricing-container">
+                <div class="pricing-card">
+                    <h3 class="pricing-title">1 Flacon</h3>
+                    <div class="pricing-price">750 Gdes</div>
+                    <p>Huile capillaire 4oz</p>
+                    <button class="btn btn-large order-btn" data-pack="1">Commander</button>
+                </div>
+                <div class="pricing-card featured">
+                    <h3 class="pricing-title">2 Flacons</h3>
+                    <div class="pricing-price">1 450 Gdes</div>
+                    <p class="pricing-savings">Économisez 50 Gdes</p>
+                    <button class="btn btn-large order-btn" data-pack="2">Commander</button>
+                </div>
+                <div class="pricing-card">
+                    <h3 class="pricing-title">3 Flacons</h3>
+                    <div class="pricing-price">2 100 Gdes</div>
+                    <p class="pricing-savings">Économisez 150 Gdes</p>
+                    <button class="btn btn-large order-btn" data-pack="3">Commander</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section-light">
+        <div class="container">
+            <h2>Questions Fréquentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">Quel est le délai pour voir des résultats ?</div>
+                    <div class="faq-answer">
+                        <p>Les premiers résultats sont généralement visibles après 2 à 4 semaines d'utilisation régulière, selon votre routine capillaire et votre type de cheveux.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Convient-il à tous les types de cheveux ?</div>
+                    <div class="faq-answer">
+                        <p>Oui, Crecer+ est formulé pour convenir à tous les types de cheveux : naturels, défrisés, ou en protective styles.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Est-ce que cela graisse les cheveux ?</div>
+                    <div class="faq-answer">
+                        <p>Non, si utilisé en petite quantité et bien massé, l'huile ne graisse pas les cheveux. Elle pénètre rapidement sans laisser de résidu gras.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">À quelle fréquence l'utiliser ?</div>
+                    <div class="faq-answer">
+                        <p>Nous recommandons une application 2 à 3 fois par semaine directement sur le cuir chevelu pour des résultats optimaux.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-method">
+                        <div class="contact-icon">💬</div>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p>Commandez directement via WhatsApp</p>
+                            <a href="https://wa.me/message/KO7Q35UM2C4MI1" class="btn" target="_blank">Nous écrire</a>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>contact@crecerplus.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h3>Réseaux sociaux</h3>
+                            <p>Suivez-nous pour plus de conseils</p>
+                            <div class="social-links">
+                                <a href="#" class="social-link">IG</a>
+                                <a href="#" class="social-link">TT</a>
+                                <a href="#" class="social-link">FB</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ingredients-list">
+                    <h3>Ingrédients Clés</h3>
+                    <ul>
+                        <li>Huile d'olive - Nourrit et hydrate</li>
+                        <li>Persil - Stimule la repousse</li>
+                        <li>Girofle - Fortifie les racines</li>
+                        <li>Gingembre - Active la micro-circulation</li>
+                        <li>Vitamine E - Brillance et protection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="#accueil">
+                <img src="images/fab1.png" alt="Crecer+ by Fabuleux" style="height: 40px; margin-bottom: 1rem;">
+            </a>
+            <div class="footer-links">
+                <a href="#accueil" class="footer-link">Accueil</a>
+                <a href="#bienfaits" class="footer-link">Bienfaits</a>
+                <a href="#evolution" class="footer-link">Évolution</a>
+                <a href="#avant-apres" class="footer-link">Avant/Après</a>
+                <a href="#avis" class="footer-link">Avis</a>
+                <a href="#utilisation" class="footer-link">Utilisation</a>
+                <a href="#commander" class="footer-link">Commander</a>
+                <a href="#faq" class="footer-link">FAQ</a>
+                <a href="#contact" class="footer-link">Contact</a>
+            </div>
+            <p class="copyright">© 2023 Crecer+ by Fabuleux. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button - CORRIGÉ -->
+    <a href="https://wa.me/message/KO7Q35UM2C4MI1" class="whatsapp-float" target="_blank">
+        <img src="images/wa1.png" alt="WhatsApp">
+    </a>
+
+    <script>
+        // Menu mobile toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Before/After Slider
+        const comparisonRange = document.querySelector('.comparison-range');
+        const afterImage = document.querySelector('.after-image');
+        const comparisonSlider = document.querySelector('.comparison-slider');
+
+        comparisonRange.addEventListener('input', function() {
+            const value = this.value;
+            afterImage.style.clipPath = `polygon(0 0, ${value}% 0, ${value}% 100%, 0 100%)`;
+            comparisonSlider.style.left = `${value}%`;
+        });
+
+        // Image Reveal on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.evolution-item').forEach(item => {
+            observer.observe(item);
+        });
+
+        // Testimonials Carousel
+        const carousel = document.querySelector('.testimonials-carousel');
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        let currentSlide = 0;
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateCarousel();
+        });
+
+        // Auto slide
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateCarousel();
+        }, 5000);
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Order buttons - all open WhatsApp
+        document.querySelectorAll('.order-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const pack = button.getAttribute('data-pack');
+                let message = `Bonjour, je souhaite commander Crecer+ by Fabuleux.`;
+                
+                if (pack === '1') {
+                    message += ` Pack: 1 flacon - 750 Gdes`;
+                } else if (pack === '2') {
+                    message += ` Pack: 2 flacons - 1 450 Gdes`;
+                } else if (pack === '3') {
+                    message += ` Pack: 3 flacons - 2 100 Gdes`;
+                }
+                
+                // Encode the message for URL
+                const encodedMessage = encodeURIComponent(message);
+                const whatsappURL = `https://wa.me/message/KO7Q35UM2C4MI1?text=${encodedMessage}`;
+                
+                window.open(whatsappURL, '_blank');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.padding = '0.5rem 0';
+                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.padding = '1rem 0';
+                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+            }
+        });
+    </script>
+</body>
+</html>

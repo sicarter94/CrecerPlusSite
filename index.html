@@ -292,7 +292,7 @@
 
         .benefit-card h3 { margin-bottom: 1rem; }
 
-        /* Évolution */
+        /* Évolution - CORRIGÉ (hauteur réduite pour voir les images entières) */
         .evolution-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -307,6 +307,7 @@
             opacity: 0;
             transform: scale(0.9);
             transition: opacity 0.8s ease, transform 0.8s ease;
+            height: 400px; /* Hauteur fixe réduite */
         }
 
         .evolution-item.visible {
@@ -316,12 +317,13 @@
 
         .evolution-item img {
             width: 100%;
-            height: 300px;
-            object-fit: cover;
+            height: 100%; /* Prend toute la hauteur du conteneur */
+            object-fit: contain; /* Affiche l'image entière sans rognage */
             transition: transform 0.5s ease;
+            background-color: var(--light-gray); /* Fond si l'image est plus petite */
         }
 
-        .evolution-item:hover img { transform: scale(1.05); }
+        .evolution-item:hover img { transform: scale(1.02); }
 
         .evolution-subtitle {
             text-align: center;
@@ -496,7 +498,7 @@
             font-style: italic;
         }
 
-        /* Commande / Prix */
+        /* Commande / Prix - CORRIGÉ (Bouteille au lieu de Flacon) */
         .pricing-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -544,6 +546,27 @@
             color: var(--gray);
             font-size: 0.9rem;
             margin-bottom: 1.5rem;
+        }
+
+        /* Section revendeurs - NOUVEAU */
+        .reseller-section {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: rgba(90, 200, 250, 0.1);
+            border-radius: var(--border-radius);
+            border: 2px dashed var(--primary);
+        }
+
+        .reseller-section h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .reseller-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
         }
 
         /* FAQ */
@@ -738,7 +761,7 @@
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
-        /* Responsive */
+        /* Responsive - AMÉLIORÉ */
         @media (max-width: 992px) {
             h1 { font-size: 2.2rem; }
 
@@ -758,6 +781,11 @@
             }
 
             section { padding: 4rem 1rem; }
+
+            /* Évolution - responsive */
+            .evolution-item {
+                height: 350px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -830,6 +858,10 @@
                 gap: 1.5rem;
             }
 
+            .evolution-item {
+                height: 300px; /* Hauteur réduite sur mobile */
+            }
+
             .comparison-image { height: 400px; }
 
             .faq-question { padding: 1.2rem; }
@@ -844,6 +876,11 @@
             }
 
             section { padding: 3rem 1rem; }
+
+            .reseller-section {
+                padding: 1.5rem;
+                margin-top: 2rem;
+            }
         }
 
         @media (max-width: 576px) {
@@ -877,6 +914,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .evolution-item {
+                height: 250px; /* Hauteur encore réduite sur très petits écrans */
+            }
+
             .comparison-image { height: 300px; }
 
             .comparison-label {
@@ -903,6 +944,19 @@
                 gap: 1rem;
                 flex-direction: column;
             }
+
+            .reseller-section {
+                padding: 1.2rem;
+                margin-top: 1.5rem;
+            }
+
+            .reseller-section h3 {
+                font-size: 1.3rem;
+            }
+
+            .reseller-section p {
+                font-size: 1rem;
+            }
         }
 
         @media (max-width: 400px) {
@@ -915,6 +969,10 @@
             .step-card,
             .pricing-card {
                 padding: 1.2rem;
+            }
+
+            .evolution-item {
+                height: 220px; /* Hauteur minimale */
             }
         }
     </style>
@@ -1002,7 +1060,7 @@
         </div>
     </section>
 
-    <!-- Évolution -->
+    <!-- Évolution - CORRIGÉ (images entières visibles) -->
     <section id="evolution">
         <div class="container">
             <h2>Évolution des Résultats</h2>
@@ -1107,32 +1165,42 @@
         </div>
     </section>
 
-    <!-- Commander -->
+    <!-- Commander - CORRIGÉ (Bouteille au lieu de Flacon + section revendeurs) -->
     <section id="commander">
         <div class="container">
             <h2>Commandez Maintenant</h2>
 
             <div class="pricing-container">
                 <div class="pricing-card">
-                    <h3 class="pricing-title">1 Flacon</h3>
+                    <h3 class="pricing-title">1 Bouteille</h3>
                     <div class="pricing-price">750 Gdes</div>
                     <p>Huile capillaire 4oz</p>
                     <button class="btn btn-large order-btn" data-pack="1">Commander</button>
                 </div>
 
                 <div class="pricing-card featured">
-                    <h3 class="pricing-title">2 Flacons</h3>
+                    <h3 class="pricing-title">2 Bouteilles</h3>
                     <div class="pricing-price">1 450 Gdes</div>
                     <p class="pricing-savings">Économisez 50 Gdes</p>
                     <button class="btn btn-large order-btn" data-pack="2">Commander</button>
                 </div>
 
                 <div class="pricing-card">
-                    <h3 class="pricing-title">3 Flacons</h3>
+                    <h3 class="pricing-title">3 Bouteilles</h3>
                     <div class="pricing-price">2 100 Gdes</div>
                     <p class="pricing-savings">Économisez 150 Gdes</p>
                     <button class="btn btn-large order-btn" data-pack="3">Commander</button>
                 </div>
+            </div>
+
+            <!-- NOUVELLE SECTION REVENDEURS -->
+            <div class="reseller-section">
+                <h3>💼 Pour les Revendeurs</h3>
+                <p><strong>Disponible par douzaines avec des prix spéciaux !</strong></p>
+                <p>Contactez-nous pour obtenir nos tarifs grossiste et développer votre business.</p>
+                <a href="https://wa.me/message/KO7Q35UM2C4MI1" class="btn btn-large" target="_blank" rel="noopener">
+                    Devenir Revendeur
+                </a>
             </div>
         </div>
     </section>
@@ -1357,18 +1425,18 @@
             });
         });
 
-        // Boutons Commander -> WhatsApp avec message auto
+        // Boutons Commander -> WhatsApp avec message auto - CORRIGÉ (Bouteille au lieu de Flacon)
         document.querySelectorAll('.order-btn').forEach(button => {
             button.addEventListener('click', () => {
                 const pack = button.getAttribute('data-pack');
                 let message = `Bonjour, je souhaite commander Crecer+ by Fabuleux.`;
 
                 if (pack === '1') {
-                    message += ` Pack: 1 flacon - 750 Gdes`;
+                    message += ` Pack: 1 bouteille - 750 Gdes`;
                 } else if (pack === '2') {
-                    message += ` Pack: 2 flacons - 1 450 Gdes`;
+                    message += ` Pack: 2 bouteilles - 1 450 Gdes`;
                 } else if (pack === '3') {
-                    message += ` Pack: 3 flacons - 2 100 Gdes`;
+                    message += ` Pack: 3 bouteilles - 2 100 Gdes`;
                 }
 
                 const encodedMessage = encodeURIComponent(message);

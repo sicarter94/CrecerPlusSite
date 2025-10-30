@@ -5,14 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crecer+ by Fabuleux - Huile capillaire naturelle 4oz</title>
     <meta name="description" content="Crecer+ by Fabuleux - Huile capillaire naturelle pour pousse et brillance visibles en 2 à 4 semaines. Ingrédients: olive, persil, girofle, gingembre, vitamine E. Prix: 750 Gdes.">
-    
+
+    <!-- Open Graph (preview partage WhatsApp / Facebook) -->
+    <meta property="og:title" content="Crecer+ by Fabuleux — Huile capillaire 4oz">
+    <meta property="og:description" content="Pousse & brillance visibles en 2 à 4 semaines. 750 Gdes.">
+    <meta property="og:image" content="https://sicarter94.github.io/CrecerPlusSite/images/im2.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon (remplace images/fav.png par ton vrai fichier si tu en as un) -->
+    <link rel="icon" href="images/fav.png" type="image/png">
+
     <!-- Polices Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <style>
-        /* Variables CSS */
         :root {
             --primary: #5AC8FA;
             --primary-dark: #2EA8E1;
@@ -23,9 +31,9 @@
             --border-radius: 16px;
             --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             --transition: all 0.3s ease;
+            --nav-h: 70px;
         }
 
-        /* Reset et styles de base */
         * {
             margin: 0;
             padding: 0;
@@ -37,7 +45,7 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
             line-height: 1.6;
             color: var(--dark);
             background-color: var(--white);
@@ -45,34 +53,28 @@
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Poppins', system-ui, sans-serif;
             font-weight: 600;
             line-height: 1.3;
             margin-bottom: 1rem;
+            color: var(--dark);
         }
 
-        h1 {
-            font-size: 2.5rem;
-        }
-
+        h1 { font-size: 2.5rem; }
         h2 {
             font-size: 2rem;
             text-align: center;
             margin-bottom: 2.5rem;
         }
 
-        p {
-            margin-bottom: 1rem;
-        }
+        p { margin-bottom: 1rem; color: var(--dark); }
 
         a {
             text-decoration: none;
             color: inherit;
         }
 
-        ul {
-            list-style: none;
-        }
+        ul { list-style: none; }
 
         img {
             max-width: 100%;
@@ -82,12 +84,14 @@
 
         section {
             padding: 5rem 1rem;
+            scroll-margin-top: var(--nav-h);
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1rem;
+            width: 100%;
         }
 
         .section-light {
@@ -129,7 +133,7 @@
             color: var(--white);
         }
 
-        /* Navigation */
+        /* Navigation fixée */
         .navbar {
             position: fixed;
             top: 0;
@@ -149,10 +153,20 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1rem;
+            width: 100%;
         }
 
         .logo {
             height: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            border-radius: 8px;
+            object-fit: contain;
         }
 
         .nav-menu {
@@ -174,6 +188,8 @@
             color: var(--white);
             padding: 0.5rem 1rem;
             border-radius: var(--border-radius);
+            font-weight: 600;
+            box-shadow: var(--box-shadow);
         }
 
         .nav-cta:hover {
@@ -193,9 +209,10 @@
             margin: 5px auto;
             background-color: var(--dark);
             transition: var(--transition);
+            border-radius: 2px;
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
             padding-top: 8rem;
             padding-bottom: 5rem;
@@ -220,7 +237,7 @@
 
         .hero-text p {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             color: var(--gray);
         }
 
@@ -239,9 +256,10 @@
             box-shadow: var(--box-shadow);
             max-height: 500px;
             object-fit: cover;
+            width: 100%;
         }
 
-        /* Benefits Section */
+        /* Bienfaits */
         .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -257,9 +275,7 @@
             transition: var(--transition);
         }
 
-        .benefit-card:hover {
-            transform: translateY(-5px);
-        }
+        .benefit-card:hover { transform: translateY(-5px); }
 
         .benefit-icon {
             width: 60px;
@@ -274,11 +290,9 @@
             font-size: 1.5rem;
         }
 
-        .benefit-card h3 {
-            margin-bottom: 1rem;
-        }
+        .benefit-card h3 { margin-bottom: 1rem; }
 
-        /* Evolution Section */
+        /* Évolution */
         .evolution-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -307,9 +321,7 @@
             transition: transform 0.5s ease;
         }
 
-        .evolution-item:hover img {
-            transform: scale(1.05);
-        }
+        .evolution-item:hover img { transform: scale(1.05); }
 
         .evolution-subtitle {
             text-align: center;
@@ -318,7 +330,7 @@
             color: var(--gray);
         }
 
-        /* Before After Section - CORRIGÉ */
+        /* Avant / Après */
         .comparison-container {
             max-width: 800px;
             margin: 0 auto;
@@ -333,7 +345,8 @@
             height: 500px;
         }
 
-        .before-image, .after-image {
+        .before-image,
+        .after-image {
             position: absolute;
             top: 0;
             left: 0;
@@ -342,6 +355,7 @@
             object-fit: cover;
         }
 
+        /* après est masqué à droite et révélé par le slider */
         .after-image {
             clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
         }
@@ -380,20 +394,15 @@
             font-size: 0.9rem;
         }
 
-        .before-label {
-            left: 20px;
-        }
-
-        .after-label {
-            right: 20px;
-        }
+        .before-label { left: 20px; }
+        .after-label { right: 20px; }
 
         input[type="range"] {
             width: 100%;
             margin-top: 1rem;
         }
 
-        /* Testimonials Section */
+        /* Avis (carrousel) */
         .testimonials-container {
             position: relative;
             max-width: 1000px;
@@ -415,6 +424,8 @@
             border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--box-shadow);
+            max-width: 500px;
+            margin: 0 auto;
         }
 
         .testimonial-image img {
@@ -447,7 +458,7 @@
             background-color: var(--primary-dark);
         }
 
-        /* Usage Section */
+        /* Utilisation */
         .usage-steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -485,7 +496,7 @@
             font-style: italic;
         }
 
-        /* Order Section */
+        /* Commande / Prix */
         .pricing-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -535,7 +546,7 @@
             margin-bottom: 1.5rem;
         }
 
-        /* FAQ Section */
+        /* FAQ */
         .faq-container {
             max-width: 800px;
             margin: 0 auto;
@@ -581,7 +592,7 @@
             max-height: 500px;
         }
 
-        /* Contact Section */
+        /* Contact */
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -598,7 +609,7 @@
 
         .contact-method {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 1rem;
         }
 
@@ -612,6 +623,7 @@
             justify-content: center;
             color: var(--primary);
             font-size: 1.2rem;
+            flex-shrink: 0;
         }
 
         .social-links {
@@ -630,6 +642,7 @@
             justify-content: center;
             color: var(--primary);
             transition: var(--transition);
+            font-weight: 600;
         }
 
         .social-link:hover {
@@ -692,7 +705,7 @@
             font-size: 0.9rem;
         }
 
-        /* WhatsApp Float Button - CORRIGÉ */
+        /* Bouton WhatsApp flottant */
         .whatsapp-float {
             position: fixed;
             bottom: 2rem;
@@ -717,69 +730,49 @@
             object-fit: contain;
         }
 
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
+        .whatsapp-float:hover { transform: scale(1.1); }
 
         @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
-        /* Responsive Styles - AMÉLIORÉ */
+        /* Responsive */
         @media (max-width: 992px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-            
+            h1 { font-size: 2.2rem; }
+
             h2 {
                 font-size: 1.8rem;
                 margin-bottom: 2rem;
             }
-            
+
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
                 gap: 2rem;
             }
-            
+
             .hero-text h1 {
                 font-size: 2.5rem;
             }
 
-            section {
-                padding: 4rem 1rem;
-            }
+            section { padding: 4rem 1rem; }
         }
 
         @media (max-width: 768px) {
-            .navbar-container {
-                padding: 0 1rem;
-            }
-            
-            .hamburger {
-                display: block;
-            }
-            
-            .hamburger.active .bar:nth-child(2) {
-                opacity: 0;
-            }
-            
+            .navbar-container { padding: 0 1rem; }
+
+            .hamburger { display: block; }
+
+            .hamburger.active .bar:nth-child(2) { opacity: 0; }
             .hamburger.active .bar:nth-child(1) {
                 transform: translateY(8px) rotate(45deg);
             }
-            
             .hamburger.active .bar:nth-child(3) {
                 transform: translateY(-8px) rotate(-45deg);
             }
-            
+
             .nav-menu {
                 position: fixed;
                 left: -100%;
@@ -792,22 +785,19 @@
                 transition: 0.3s;
                 box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
                 padding: 2rem 0;
+                z-index: 999;
             }
-            
-            .nav-menu.active {
-                left: 0;
-            }
-            
-            .nav-item {
-                margin: 1rem 0;
-            }
-            
+
+            .nav-menu.active { left: 0; }
+
+            .nav-item { margin: 1rem 0; }
+
             .hero {
                 padding-top: 6rem;
                 padding-bottom: 3rem;
                 min-height: auto;
             }
-            
+
             .hero-text h1 {
                 font-size: 2rem;
                 margin-bottom: 1rem;
@@ -817,7 +807,7 @@
                 font-size: 1.1rem;
                 margin-bottom: 1.5rem;
             }
-            
+
             .hero-buttons {
                 justify-content: center;
                 gap: 0.8rem;
@@ -840,59 +830,42 @@
                 gap: 1.5rem;
             }
 
-            .comparison-image {
-                height: 400px;
-            }
+            .comparison-image { height: 400px; }
 
-            .faq-question {
-                padding: 1.2rem;
-            }
+            .faq-question { padding: 1.2rem; }
 
-            .contact-container {
-                gap: 2rem;
-            }
-            
+            .contact-container { gap: 2rem; }
+
             .pricing-card.featured {
                 transform: scale(1);
             }
-            
             .pricing-card.featured:hover {
                 transform: translateY(-5px);
             }
 
-            section {
-                padding: 3rem 1rem;
-            }
+            section { padding: 3rem 1rem; }
         }
 
         @media (max-width: 576px) {
-            h1 {
-                font-size: 2rem;
-            }
-
+            h1 { font-size: 2rem; }
             h2 {
                 font-size: 1.6rem;
                 margin-bottom: 1.5rem;
             }
-            
-            .hero {
-                padding-top: 5rem;
-            }
-            
-            .hero-text h1 {
-                font-size: 1.8rem;
-            }
-            
+
+            .hero { padding-top: 5rem; }
+            .hero-text h1 { font-size: 1.8rem; }
+
             .btn-large {
                 padding: 0.8rem 1.5rem;
                 font-size: 1rem;
             }
-            
+
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .hero-buttons .btn {
                 width: 100%;
                 max-width: 300px;
@@ -904,9 +877,7 @@
                 grid-template-columns: 1fr;
             }
 
-            .comparison-image {
-                height: 300px;
-            }
+            .comparison-image { height: 300px; }
 
             .comparison-label {
                 font-size: 0.8rem;
@@ -926,9 +897,7 @@
                 height: 30px;
             }
 
-            section {
-                padding: 2.5rem 1rem;
-            }
+            section { padding: 2.5rem 1rem; }
 
             .footer-links {
                 gap: 1rem;
@@ -937,17 +906,10 @@
         }
 
         @media (max-width: 400px) {
-            .hero-text h1 {
-                font-size: 1.6rem;
-            }
+            .hero-text h1 { font-size: 1.6rem; }
+            h2 { font-size: 1.4rem; }
 
-            h2 {
-                font-size: 1.4rem;
-            }
-
-            .comparison-image {
-                height: 250px;
-            }
+            .comparison-image { height: 250px; }
 
             .benefit-card,
             .step-card,
@@ -962,9 +924,9 @@
     <nav class="navbar">
         <div class="navbar-container">
             <a href="#accueil" class="logo">
-                <img src="images/fab1.png" alt="Crecer+ by Fabuleux" class="logo">
+                <img src="images/fab1.png" alt="Crecer+ by Fabuleux">
             </a>
-            
+
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#accueil" class="nav-link">Accueil</a></li>
                 <li class="nav-item"><a href="#bienfaits" class="nav-link">Bienfaits</a></li>
@@ -977,7 +939,7 @@
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 <li class="nav-item"><a href="#commander" class="nav-link nav-cta">Commander – 750 Gdes</a></li>
             </ul>
-            
+
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -986,7 +948,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="accueil" class="hero">
         <div class="container">
             <div class="hero-content">
@@ -1000,13 +962,13 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="images/im2.jpg" alt="Crecer+ Huile Capillaire">
+                    <img src="images/im2.jpg" alt="Huile capillaire Crecer+ by Fabuleux" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
+    <!-- Bienfaits -->
     <section id="bienfaits" class="section-light">
         <div class="container">
             <h2>Bienfaits & Ingrédients</h2>
@@ -1040,83 +1002,88 @@
         </div>
     </section>
 
-    <!-- Evolution Section -->
+    <!-- Évolution -->
     <section id="evolution">
         <div class="container">
             <h2>Évolution des Résultats</h2>
             <div class="evolution-gallery">
                 <div class="evolution-item">
-                    <img src="images/1.jpg" alt="Résultats semaine 1">
+                    <img src="images/1.jpg" alt="Évolution visuelle 1" loading="lazy">
                 </div>
                 <div class="evolution-item">
-                    <img src="images/2.jpg" alt="Résultats semaine 2">
+                    <img src="images/2.jpg" alt="Évolution visuelle 2" loading="lazy">
                 </div>
                 <div class="evolution-item">
-                    <img src="images/3.jpg" alt="Résultats semaine 3">
+                    <img src="images/3.jpg" alt="Évolution visuelle 3" loading="lazy">
                 </div>
             </div>
             <p class="evolution-subtitle">Les images parlent d'elles-mêmes.</p>
         </div>
     </section>
 
-    <!-- Before After Section - CORRIGÉ -->
+    <!-- Avant / Après -->
     <section id="avant-apres" class="section-light">
         <div class="container">
             <h2>Avant / Après</h2>
+
             <div class="comparison-container">
                 <div class="comparison-image">
-                    <!-- IMAGES INVERSEES -->
-                    <img src="images/apres.jpg" alt="Après Crecer+" class="before-image">
-                    <img src="images/avant.jpg" alt="Avant Crecer+" class="after-image">
+                    <!-- IMPORTANT : gauche = avant, droite = après -->
+                    <img src="images/avant.jpg" alt="Avant Crecer+" class="before-image" loading="lazy">
+                    <img src="images/apres.jpg" alt="Après Crecer+ ✨" class="after-image" loading="lazy">
+
                     <div class="comparison-slider"></div>
                     <div class="comparison-label before-label">Avant Crecer+</div>
                     <div class="comparison-label after-label">Après Crecer+ ✨</div>
                 </div>
-                <input type="range" min="0" max="100" value="50" class="comparison-range">
+                <input type="range" min="0" max="100" value="50" class="comparison-range" aria-label="Comparateur avant/après">
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Avis -->
     <section id="avis">
         <div class="container">
             <h2>Avis Clients</h2>
             <p style="text-align: center; margin-bottom: 2rem;">Elles l'ont essayé. Elles ont adopté.</p>
+
             <div class="testimonials-container">
                 <div class="testimonials-carousel">
                     <div class="testimonial-slide">
                         <div class="testimonial-image">
-                            <img src="images/sc1.jpg" alt="Avis client 1">
+                            <img src="images/sc1.jpg" alt="Avis cliente 1" loading="lazy">
                         </div>
                     </div>
                     <div class="testimonial-slide">
                         <div class="testimonial-image">
-                            <img src="images/sc2.jpg" alt="Avis client 2">
+                            <img src="images/sc2.jpg" alt="Avis cliente 2" loading="lazy">
                         </div>
                     </div>
                     <div class="testimonial-slide">
                         <div class="testimonial-image">
-                            <img src="images/sc3.jpg" alt="Avis client 3">
+                            <img src="images/sc3.jpg" alt="Avis cliente 3" loading="lazy">
                         </div>
                     </div>
                     <div class="testimonial-slide">
                         <div class="testimonial-image">
-                            <img src="images/sc4.jpg" alt="Avis client 4">
+                            <img src="images/sc4.jpg" alt="Avis cliente 4" loading="lazy">
                         </div>
                     </div>
                 </div>
+
                 <div class="carousel-controls">
-                    <button class="carousel-btn prev-btn">&#10094;</button>
-                    <button class="carousel-btn next-btn">&#10095;</button>
+                    <button class="carousel-btn prev-btn" aria-label="Précédent">&#10094;</button>
+                    <button class="carousel-btn next-btn" aria-label="Suivant">&#10095;</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Usage Section -->
+    <!-- Utilisation -->
     <section id="utilisation" class="section-light">
         <div class="container">
             <h2>Mode d'Utilisation</h2>
+
             <div class="usage-steps">
                 <div class="step-card">
                     <div class="step-number">1</div>
@@ -1134,16 +1101,18 @@
                     <p>2 à 3 fois par semaine, à la racine.</p>
                 </div>
             </div>
+
             <div class="step-tip">
                 <p><strong>Conseil :</strong> Insister sur les zones clairsemées. Aucun rinçage nécessaire.</p>
             </div>
         </div>
     </section>
 
-    <!-- Order Section -->
+    <!-- Commander -->
     <section id="commander">
         <div class="container">
             <h2>Commandez Maintenant</h2>
+
             <div class="pricing-container">
                 <div class="pricing-card">
                     <h3 class="pricing-title">1 Flacon</h3>
@@ -1151,12 +1120,14 @@
                     <p>Huile capillaire 4oz</p>
                     <button class="btn btn-large order-btn" data-pack="1">Commander</button>
                 </div>
+
                 <div class="pricing-card featured">
                     <h3 class="pricing-title">2 Flacons</h3>
                     <div class="pricing-price">1 450 Gdes</div>
                     <p class="pricing-savings">Économisez 50 Gdes</p>
                     <button class="btn btn-large order-btn" data-pack="2">Commander</button>
                 </div>
+
                 <div class="pricing-card">
                     <h3 class="pricing-title">3 Flacons</h3>
                     <div class="pricing-price">2 100 Gdes</div>
@@ -1167,10 +1138,11 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ -->
     <section id="faq" class="section-light">
         <div class="container">
             <h2>Questions Fréquentes</h2>
+
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">Quel est le délai pour voir des résultats ?</div>
@@ -1178,18 +1150,21 @@
                         <p>Les premiers résultats sont généralement visibles après 2 à 4 semaines d'utilisation régulière, selon votre routine capillaire et votre type de cheveux.</p>
                     </div>
                 </div>
+
                 <div class="faq-item">
                     <div class="faq-question">Convient-il à tous les types de cheveux ?</div>
                     <div class="faq-answer">
                         <p>Oui, Crecer+ est formulé pour convenir à tous les types de cheveux : naturels, défrisés, ou en protective styles.</p>
                     </div>
                 </div>
+
                 <div class="faq-item">
                     <div class="faq-question">Est-ce que cela graisse les cheveux ?</div>
                     <div class="faq-answer">
                         <p>Non, si utilisé en petite quantité et bien massé, l'huile ne graisse pas les cheveux. Elle pénètre rapidement sans laisser de résidu gras.</p>
                     </div>
                 </div>
+
                 <div class="faq-item">
                     <div class="faq-question">À quelle fréquence l'utiliser ?</div>
                     <div class="faq-answer">
@@ -1200,10 +1175,11 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact">
         <div class="container">
             <h2>Contactez-nous</h2>
+
             <div class="contact-container">
                 <div class="contact-info">
                     <div class="contact-method">
@@ -1211,29 +1187,41 @@
                         <div>
                             <h3>WhatsApp</h3>
                             <p>Commandez directement via WhatsApp</p>
-                            <a href="https://wa.me/message/KO7Q35UM2C4MI1" class="btn" target="_blank">Nous écrire</a>
+                            <a href="https://wa.me/message/KO7Q35UM2C4MI1" class="btn" target="_blank" rel="noopener">Nous écrire</a>
                         </div>
                     </div>
+
                     <div class="contact-method">
                         <div class="contact-icon">📧</div>
                         <div>
                             <h3>Email</h3>
-                            <p>contact@crecerplus.com</p>
+                            <p>fabuleux.ht@gmail.com</p>
                         </div>
                     </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h3>Téléphone</h3>
+                            <p>+509 3674 1089</p>
+                            <p>+509 3501 9353</p>
+                        </div>
+                    </div>
+
                     <div class="contact-method">
                         <div class="contact-icon">📱</div>
                         <div>
                             <h3>Réseaux sociaux</h3>
                             <p>Suivez-nous pour plus de conseils</p>
                             <div class="social-links">
-                                <a href="#" class="social-link">IG</a>
-                                <a href="#" class="social-link">TT</a>
-                                <a href="#" class="social-link">FB</a>
+                                <a href="#" class="social-link" aria-label="Instagram">IG</a>
+                                <a href="#" class="social-link" aria-label="TikTok">TT</a>
+                                <a href="#" class="social-link" aria-label="Facebook">FB</a>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="ingredients-list">
                     <h3>Ingrédients Clés</h3>
                     <ul>
@@ -1254,6 +1242,7 @@
             <a href="#accueil">
                 <img src="images/fab1.png" alt="Crecer+ by Fabuleux" style="height: 40px; margin-bottom: 1rem;">
             </a>
+
             <div class="footer-links">
                 <a href="#accueil" class="footer-link">Accueil</a>
                 <a href="#bienfaits" class="footer-link">Bienfaits</a>
@@ -1265,16 +1254,20 @@
                 <a href="#faq" class="footer-link">FAQ</a>
                 <a href="#contact" class="footer-link">Contact</a>
             </div>
-            <p class="copyright">© 2023 Crecer+ by Fabuleux. Tous droits réservés.</p>
+
+            <p class="copyright">© <span id="year"></span> Crecer+ by Fabuleux. Tous droits réservés.</p>
         </div>
     </footer>
 
-    <!-- WhatsApp Float Button - CORRIGÉ -->
-    <a href="https://wa.me/message/KO7Q35UM2C4MI1" class="whatsapp-float" target="_blank">
+    <!-- Bouton WhatsApp flottant -->
+    <a href="https://wa.me/message/KO7Q35UM2C4MI1" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">
         <img src="images/wa1.png" alt="WhatsApp">
     </a>
 
     <script>
+        // injecter année dynamique dans footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
         // Menu mobile toggle
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
@@ -1284,13 +1277,13 @@
             navMenu.classList.toggle('active');
         });
 
-        // Close mobile menu when clicking on a link
+        // Fermer menu mobile quand on clique sur un lien
         document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
         }));
 
-        // Before/After Slider
+        // Avant / Après slider
         const comparisonRange = document.querySelector('.comparison-range');
         const afterImage = document.querySelector('.after-image');
         const comparisonSlider = document.querySelector('.comparison-slider');
@@ -1301,7 +1294,7 @@
             comparisonSlider.style.left = `${value}%`;
         });
 
-        // Image Reveal on Scroll
+        // Effet reveal sur Évolution
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1319,7 +1312,7 @@
             observer.observe(item);
         });
 
-        // Testimonials Carousel
+        // Carrousel avis
         const carousel = document.querySelector('.testimonials-carousel');
         const slides = document.querySelectorAll('.testimonial-slide');
         const prevBtn = document.querySelector('.prev-btn');
@@ -1346,31 +1339,31 @@
             updateCarousel();
         }, 5000);
 
-        // FAQ Accordion
+        // FAQ accordéon
         const faqItems = document.querySelectorAll('.faq-item');
 
         faqItems.forEach(item => {
             const question = item.querySelector('.faq-question');
-            
+
             question.addEventListener('click', () => {
-                // Close all other items
+                // referme les autres
                 faqItems.forEach(otherItem => {
                     if (otherItem !== item) {
                         otherItem.classList.remove('active');
                     }
                 });
-                
-                // Toggle current item
+
+                // toggle celui qu'on clique
                 item.classList.toggle('active');
             });
         });
 
-        // Order buttons - all open WhatsApp
+        // Boutons Commander -> WhatsApp avec message auto
         document.querySelectorAll('.order-btn').forEach(button => {
             button.addEventListener('click', () => {
                 const pack = button.getAttribute('data-pack');
                 let message = `Bonjour, je souhaite commander Crecer+ by Fabuleux.`;
-                
+
                 if (pack === '1') {
                     message += ` Pack: 1 flacon - 750 Gdes`;
                 } else if (pack === '2') {
@@ -1378,16 +1371,14 @@
                 } else if (pack === '3') {
                     message += ` Pack: 3 flacons - 2 100 Gdes`;
                 }
-                
-                // Encode the message for URL
+
                 const encodedMessage = encodeURIComponent(message);
                 const whatsappURL = `https://wa.me/message/KO7Q35UM2C4MI1?text=${encodedMessage}`;
-                
-                window.open(whatsappURL, '_blank');
+                window.open(whatsappURL, '_blank', 'noopener');
             });
         });
 
-        // Navbar scroll effect
+        // Effet visuel navbar au scroll (réduit la hauteur sur scroll)
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {

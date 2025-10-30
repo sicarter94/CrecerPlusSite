@@ -12,10 +12,10 @@
     <meta property="og:image" content="https://sicarter94.github.io/CrecerPlusSite/images/im2.jpg">
     <meta property="og:type" content="website">
 
-    <!-- Favicon (remplace images/fav.png par ton vrai fichier si tu en as un) -->
+    <!-- Favicon -->
     <link rel="icon" href="images/fav.png" type="image/png">
 
-    <!-- Polices Google Fonts -->
+    <!-- Polices -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -292,7 +292,7 @@
 
         .benefit-card h3 { margin-bottom: 1rem; }
 
-        /* Évolution - CORRIGÉ (hauteur réduite pour voir les images entières) */
+        /* Évolution */
         .evolution-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -307,7 +307,11 @@
             opacity: 0;
             transform: scale(0.9);
             transition: opacity 0.8s ease, transform 0.8s ease;
-            height: 400px; /* Hauteur fixe réduite */
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
         }
 
         .evolution-item.visible {
@@ -317,13 +321,13 @@
 
         .evolution-item img {
             width: 100%;
-            height: 100%; /* Prend toute la hauteur du conteneur */
-            object-fit: contain; /* Affiche l'image entière sans rognage */
+            height: auto;
+            max-height: 500px;
+            object-fit: contain;
             transition: transform 0.5s ease;
-            background-color: var(--light-gray); /* Fond si l'image est plus petite */
         }
 
-        .evolution-item:hover img { transform: scale(1.02); }
+        .evolution-item:hover img { transform: scale(1.03); }
 
         .evolution-subtitle {
             text-align: center;
@@ -357,7 +361,7 @@
             object-fit: cover;
         }
 
-        /* après est masqué à droite et révélé par le slider */
+        /* après révélé par le slider */
         .after-image {
             clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
         }
@@ -404,7 +408,7 @@
             margin-top: 1rem;
         }
 
-        /* Avis (carrousel) */
+        /* Avis */
         .testimonials-container {
             position: relative;
             max-width: 1000px;
@@ -498,7 +502,7 @@
             font-style: italic;
         }
 
-        /* Commande / Prix - CORRIGÉ (Bouteille au lieu de Flacon) */
+        /* Commande / Prix */
         .pricing-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -548,25 +552,12 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Section revendeurs - NOUVEAU */
-        .reseller-section {
+        .reseller-note {
             text-align: center;
-            margin-top: 3rem;
-            padding: 2rem;
-            background-color: rgba(90, 200, 250, 0.1);
-            border-radius: var(--border-radius);
-            border: 2px dashed var(--primary);
-        }
-
-        .reseller-section h3 {
-            color: var(--primary-dark);
-            margin-bottom: 1rem;
-        }
-
-        .reseller-section p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            color: var(--gray);
+            font-style: italic;
         }
 
         /* FAQ */
@@ -761,7 +752,7 @@
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
-        /* Responsive - AMÉLIORÉ */
+        /* Responsive */
         @media (max-width: 992px) {
             h1 { font-size: 2.2rem; }
 
@@ -781,11 +772,6 @@
             }
 
             section { padding: 4rem 1rem; }
-
-            /* Évolution - responsive */
-            .evolution-item {
-                height: 350px;
-            }
         }
 
         @media (max-width: 768px) {
@@ -858,10 +844,6 @@
                 gap: 1.5rem;
             }
 
-            .evolution-item {
-                height: 300px; /* Hauteur réduite sur mobile */
-            }
-
             .comparison-image { height: 400px; }
 
             .faq-question { padding: 1.2rem; }
@@ -876,11 +858,6 @@
             }
 
             section { padding: 3rem 1rem; }
-
-            .reseller-section {
-                padding: 1.5rem;
-                margin-top: 2rem;
-            }
         }
 
         @media (max-width: 576px) {
@@ -914,10 +891,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .evolution-item {
-                height: 250px; /* Hauteur encore réduite sur très petits écrans */
-            }
-
             .comparison-image { height: 300px; }
 
             .comparison-label {
@@ -944,19 +917,6 @@
                 gap: 1rem;
                 flex-direction: column;
             }
-
-            .reseller-section {
-                padding: 1.2rem;
-                margin-top: 1.5rem;
-            }
-
-            .reseller-section h3 {
-                font-size: 1.3rem;
-            }
-
-            .reseller-section p {
-                font-size: 1rem;
-            }
         }
 
         @media (max-width: 400px) {
@@ -969,10 +929,6 @@
             .step-card,
             .pricing-card {
                 padding: 1.2rem;
-            }
-
-            .evolution-item {
-                height: 220px; /* Hauteur minimale */
             }
         }
     </style>
@@ -1060,7 +1016,7 @@
         </div>
     </section>
 
-    <!-- Évolution - CORRIGÉ (images entières visibles) -->
+    <!-- Évolution -->
     <section id="evolution">
         <div class="container">
             <h2>Évolution des Résultats</h2>
@@ -1086,9 +1042,9 @@
 
             <div class="comparison-container">
                 <div class="comparison-image">
-                    <!-- IMPORTANT : gauche = avant, droite = après -->
-                     <img src="images/apres.jpg" alt="Après Crecer+" class="before-image">
-                    <img src="images/avant.jpg" alt="Avant Crecer+" class="after-image">
+                    <!-- gauche = Avant / droite = Après -->
+                    <img src="images/avant.jpg" alt="Avant Crecer+" class="before-image" loading="lazy">
+                    <img src="images/apres.jpg" alt="Après Crecer+ ✨" class="after-image" loading="lazy">
                     <div class="comparison-slider"></div>
                     <div class="comparison-label before-label">Avant Crecer+</div>
                     <div class="comparison-label after-label">Après Crecer+ ✨</div>
@@ -1165,7 +1121,7 @@
         </div>
     </section>
 
-    <!-- Commander - CORRIGÉ (Bouteille au lieu de Flacon + section revendeurs) -->
+    <!-- Commander -->
     <section id="commander">
         <div class="container">
             <h2>Commandez Maintenant</h2>
@@ -1193,14 +1149,8 @@
                 </div>
             </div>
 
-            <!-- NOUVELLE SECTION REVENDEURS -->
-            <div class="reseller-section">
-                <h3>💼 Pour les Revendeurs</h3>
-                <p><strong>Disponible par douzaines avec des prix spéciaux !</strong></p>
-                <p>Contactez-nous pour obtenir nos tarifs grossiste et développer votre business.</p>
-                <a href="https://wa.me/message/KO7Q35UM2C4MI1" class="btn btn-large" target="_blank" rel="noopener">
-                    Devenir Revendeur
-                </a>
+            <div class="reseller-note">
+                Disponible par douzaines pour les revendeurs.
             </div>
         </div>
     </section>
@@ -1332,7 +1282,7 @@
     </a>
 
     <script>
-        // injecter année dynamique dans footer
+        // année dynamique footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
         // Menu mobile toggle
@@ -1351,7 +1301,7 @@
         }));
 
         // Avant / Après slider
-        const comparisonRange = document.querySelector('.comparison-range');
+       const comparisonRange = document.querySelector('.comparison-range');
         const afterImage = document.querySelector('.after-image');
         const comparisonSlider = document.querySelector('.comparison-slider');
 
@@ -1420,12 +1370,12 @@
                     }
                 });
 
-                // toggle celui qu'on clique
+                // toggle celui cliqué
                 item.classList.toggle('active');
             });
         });
 
-        // Boutons Commander -> WhatsApp avec message auto - CORRIGÉ (Bouteille au lieu de Flacon)
+        // Boutons Commander -> WhatsApp avec message auto
         document.querySelectorAll('.order-btn').forEach(button => {
             button.addEventListener('click', () => {
                 const pack = button.getAttribute('data-pack');
@@ -1445,7 +1395,7 @@
             });
         });
 
-        // Effet visuel navbar au scroll (réduit la hauteur sur scroll)
+        // Effet visuel navbar au scroll
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
